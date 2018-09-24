@@ -146,11 +146,17 @@ class CapitalT(object):
           :type letter_thickness:   int
         """
         # --------------------------------------------------------------
-        # TODO: 3.
+        # done: 3.
         #   READ the above specification, including the Example.
         #   Implement this method
         #   Note: you will need to also implement attach_to before testing
         # --------------------------------------------------------------
+        self.h_rect_tlc = rg.Point(int_center.x - (width/2), self.int_center.y - (self.letter_thickness/2))
+        self.h_rect_brc = rg.Point(self.int_center.x + (width/2), self.int_center.y + (self.letter_thickness/2))
+        self.v_rect_tlc = rg.Point(self.int_center.x - (self.letter_thickness/2), self.int_center.y - (height - self.letter_thickness))
+        self.v_rect_brc = rg.Point(self.int_center.x + (self.letter_thickness/2), self.int_center.y + (height - self.letter_thickness))
+        self.h_rect = rg.Rectangle()
+
 
     def attach_to(self, window):
         """
